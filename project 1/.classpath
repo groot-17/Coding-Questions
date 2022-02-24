@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="C:/Users/VIPIN/Downloads/byte-buddy-agent-1.12.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/VIPIN/Downloads/maven-plugin-api-3.8.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/VIPIN/Downloads/byte-buddy-1.12.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/VIPIN/Downloads/mockito-all-2.0.2-beta.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
