@@ -1,30 +1,19 @@
-package com.practice.example;
+package com.mbdri;
 
-import java.util.Arrays;
-import java.util.LinkedHashMap;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.function.Consumer;
 
 public class ConsumerInterface {
+	public static void main(String[] args) {
+        List<String> names = new ArrayList<>();
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
 
-
-public static void main(String[] args) {
+      Consumer<String> counsumerConsumer=s->System.out.println(s);
+	       counsumerConsumer.accept("vipin");
+	       
+	}
 	
-		List<Integer> l1 = Arrays.asList(1,2,3,4,5,6);
-		
-		l1.stream().forEach(t-> System.out.println("print:"+t));
-		
-		String s1 = "Capgemnini";
-	//List<String> l1	=s1.split("");
-		List nameList=Arrays.asList("ram","raja","ram","mohan");
-	
-  System.out.println(Stream.of(s1).map(s->new StringBuilder(s).reverse()).collect(Collectors.joining("")));
-
-Map<String, Long> result = Arrays.stream(s1.split("")).map(String::toLowerCase).collect(Collectors.groupingBy(s -> s, LinkedHashMap::new, Collectors.counting()));
-  System.out.println(result);
- System.out.println(nameList.stream().collect(Collectors.groupingBy(s->s,LinkedHashMap::new,Collectors.counting()))); 
-} 
 }
