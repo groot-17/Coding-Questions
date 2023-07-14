@@ -187,21 +187,47 @@ map.put(5, "five");
 //		}
 //	}
 //	map.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).forEach(System.out::println) ;
-String str="communication";
-Map<String, Long> result = Arrays.stream(str.split("")).map(String::toLowerCase).collect(Collectors.groupingBy(s -> s, LinkedHashMap::new, Collectors.counting()));
-System.out.println(result);
-String[] s1= {"raj","ram","mohan","raj","ram"};
+//String str="communication";
+//List<Integer> l1 = Arrays.asList(1,3,6,8,5,3,2,22,14,466);
+//Collections.sort(l1);
+//System.out.println("Second highest element"+l1.get(l1.size()-2));
+//System.out.println(l1.stream().sorted(Comparator.reverseOrder()).skip(1).findFirst().get());
+//Map<String, Long> result = Arrays.stream(str.split("")).map(String::toLowerCase).collect(Collectors.groupingBy(s -> s, LinkedHashMap::new, Collectors.counting()));
+//System.out.println(result);
+//String[] s1= {"raj","ram","mohan","raj","ram"};
+//map.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).forEach(System.out::println);
+//System.out.println("Map of names"+Stream.of(s1).collect(Collectors.groupingBy(s->s,LinkedHashMap::new,Collectors.counting())));
+//System.out.println(Stream.of(str).map(String::toLowerCase).collect(Collectors.groupingBy(s->s,LinkedHashMap::new,Collectors.counting())));
+//
+//String s2="Today is monday";
+//String[] arr=s2.split(" ");
+//String s3="";
+//for(int i=arr.length-1;i>=0;i--) {
+//	s3=s3+" "+arr[i];
+//}
+//System.out.println(s3);
+//System.out.println(Stream.of(str).map(s->new StringBuilder(s).reverse()).collect(Collectors.joining()));
+//String sa1 = "Scaler"; String sa2=new String("Scaler"); System.out.println(sa1==sa2);
+//
+//int[] x1= {2,3,10,5,1,2};
+//int[] x2= {};
+//int max=0;
+//for(int i=0;i<x1.length;i++) {
+//	for(int j=i+1;j<x1.length-1;j++) {
+//		if(x1[i]<x1[j]) {
+//			max=x1[j];
+//			x2[i]=max;
+//		}
+//		else {
+//			x2[i]=-1;
+//		}
+//	}
+//	System.out.println(x2);
+//}
+ String s1="Communication";
+ //Stream.of(s1).map(s->new StringBuilder().reverse()).collect(Collections.joining());
+Stream.of(s1).map(s->new StringBuilder(s).reverse()).collect(Collectors.joining());
+//System.out.println(Stream.of(s1).map(s->(char)s).reduce("", (a,b)->b+a,(a1,b1)->b1+a1));
 
-System.out.println(Stream.of(s1).collect(Collectors.groupingBy(s->s,LinkedHashMap::new,Collectors.counting())));
-
-System.out.println(Stream.of(str).map(String::toLowerCase).collect(Collectors.groupingBy(s->s,LinkedHashMap::new,Collectors.counting())));
-
-
-
-
-
-
-
-
-
+System.out.println(s1.chars().mapToObj(c->(char)c).reduce("",(a,b)->b+a,(a1,b1)->b1+a1));
 	}}
